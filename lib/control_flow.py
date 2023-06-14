@@ -2,16 +2,61 @@
 
 def admin_login(username, password):
     # your code here
-    pass
+    if (username.upper() == "ADMIN") and password == "12345":
+        return "Access granted"
+    else:
+        return "Access denied"
+
+    # if username.upper() == "ADMIN":
+    #     if password == "12345":
+    #         return "Access granted"
+    #     else:
+    #         return "Access denied"
+    # else:
+    #     return "Access denied"
 
 def hows_the_weather(temperature):
     # your code here
-    pass
+    if temperature < 40:
+        return "It's brisk out there!"
+    elif (temperature >=40) and (temperature <= 65):
+        return "It's a little chilly out there!"
+    elif temperature >= 85:
+        return "It's too dang hot out there!"
+    else:
+        return "It's perfect out there!"
 
 def fizzbuzz(num):
     # your code here
-    pass
+    if (num/3).is_integer() and (num/5).is_integer():
+        return "FizzBuzz"
+    elif (num/3).is_integer():
+        return "Fizz"
+    elif (num/5).is_integer():
+        return "Buzz"
+    else:
+        return num
 
 def calculator(operation, num1, num2):
     # your code here
-    pass
+    # operation_map = {
+    #     "+": +,
+    #     "-": -,
+    #     "/": /,
+    #     "*": *
+    # }
+    # try: 
+    #     return num1 operation_map.get(operation) num2
+    # except:
+    #     return "Invalid operation!"
+    if operation == "+":
+        return num1 + num2
+    elif operation == "-":
+        return num1 - num2
+    elif operation == "/":
+        return num1/num2
+    elif operation == "*":
+        return num1*num2
+    else:
+        print("Invalid operation!")
+        return None
